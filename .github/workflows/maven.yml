@@ -27,7 +27,7 @@ jobs:
       with:
           node-version: '20.x'
 
-    - run: npm install .\star-wars-main\
+    - run: npm install star-wars-main\
 
     - uses: actions/checkout@v3
     - name: Set up JDK 22
