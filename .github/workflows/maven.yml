@@ -27,8 +27,7 @@ jobs:
       with:
           node-version: '20.x'
 
-    - name: Install website
-      run: cd star-wars-main && npm install && npm run build && npm run start
+
 
     - uses: actions/checkout@v3
     - name: Set up JDK 22
@@ -38,5 +37,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Install website Build with Maven
+      run: cd star-wars-main && npm install && npm run build && npm run start && mvn -B package --file pom.xml
