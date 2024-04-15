@@ -38,4 +38,4 @@ jobs:
         cache: maven
 
     - name: Install website Build with Maven
-      run: cd star-wars-main && sudo npm install && sudo npm run build && sudo npm run start && mvn -B package --file pom.xml
+      run: cd star-wars-main && sudo npm install && sudo npm run build && sudo npm run dev && mvn -B package --file pom.xml
