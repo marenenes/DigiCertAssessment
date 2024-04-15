@@ -27,7 +27,8 @@ jobs:
       with:
           node-version: '20.x'
 
-    - run: npm install ./star-wars-main/
+    - run: clone website
+    - run: git clone https://github.com/MindfulMichaelJames/star-wars.git
 
     - uses: actions/checkout@v3
     - name: Set up JDK 22
