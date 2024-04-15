@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="5.445" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Dreams home page" name="Validating" time="3.219">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I navigate to home......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Dreams home page" name="Validating 2" time="2.123">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I navigate to home......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
