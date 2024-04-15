@@ -28,7 +28,7 @@ jobs:
           node-version: '20.x'
 
     - name: Install website
-      run: cd star-wars-main && npm install && npm run start
+      run: cd star-wars-main && npm install && npm run build
 
     - uses: actions/checkout@v3
     - name: Set up JDK 22
