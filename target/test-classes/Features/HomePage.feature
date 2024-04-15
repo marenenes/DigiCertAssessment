@@ -11,7 +11,7 @@ Feature: Display and Select Star Wars Movies
     And   I navigate to home
     When  I click the "Title"
     Then  I validate the last movie is "The Phantom Menace"
-    
+
   Scenario: Validate The The Phantom Menace movie Planets list has Camino
     Given I launch browser
     And   I navigate to home
