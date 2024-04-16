@@ -32,6 +32,7 @@ public class SeleniumUtility {
 
     public static void BrowserClose()
     {
-        driver.quit();
+        if (driver!=null)
+            driver.quit();
     }
 }
