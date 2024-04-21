@@ -27,7 +27,6 @@ public class SeleniumUtility {
                     options.addArguments("--no-sandbox");
                     options.addArguments("--ignore-certificate-errors");
 
-
                 }
                 driver= new ChromeDriver(options);
                 driver.get(Url);

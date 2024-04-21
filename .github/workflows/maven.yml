@@ -20,7 +20,7 @@ jobs:
     - run: sudo npm install pm2 -g
     - run: npm install
     - run: npm run build --if-present
-    - run: pm2 --name StarWarsApp start npm -- start
+    - run: pm2 --name StarWarsApp -p 3000 start npm -- start
 
     - uses: actions/checkout@v4
     - name: Set up JDK 22
