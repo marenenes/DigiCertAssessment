@@ -1,47 +1,26 @@
 package StepDefinitions;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import services.swapi.MovieService;
 
 
 public class SwapiApiSteps {
-    @When("user validate the movie the movie count is {string}")
-    public void userValidateTheMovieTheMovieCountIs(String arg0) {
-        boolean succes = false;
-        try {
 
-            MovieService movies = new MovieService();
-            succes = movies.Validate_MovieCount(arg0);
-            Assert.assertTrue(succes);
-
-        } catch (Exception e) {
-            Assert.fail(e.getMessage());
-        }
+    @When("the user validates that the total number of movies returned is {string}")
+    public void userValidateThatTheTotalNumberOfMoviesReturnedIs(String arg0) throws JsonProcessingException {
+        MovieService movies = new MovieService();
+        Assert.assertTrue(movies.Validate_MovieCount(arg0));
+    }
+    @When("user validates that the movie with id {int} has {string} as a director")
+    public void userValidatesThatMovieWithIdHasAsADirector(int arg0, String arg1) throws JsonProcessingException {
+        MovieService movies = new MovieService();
+        Assert.assertTrue(movies.Validate_DirectorName(arg1,arg0));
     }
 
-    @When("user validates Director name of director number {int} is {string}")
-    public void userValidatesDirectorNameOfDirectorNumberIs(int arg0, String arg1) {
-        boolean succes = false;
-        try {
-            MovieService movies = new MovieService();
-            succes = movies.Validate_DirectorName(arg1,arg0);
-            Assert.assertTrue(succes);
-
-        } catch (Exception e) {
-            Assert.fail(e.getMessage());
-        }
-    }
-
-    @When("user validates producer name of director number {int} is {string}")
-    public void userValidatesProducerNameOfDirectorNumberIs(int arg0, String arg1) {
-        boolean succes = false;
-        try {
-            MovieService movies = new MovieService();
-            succes = movies.Validate_ProducerNames(arg1,arg0);
-            Assert.assertTrue(succes);
-
-        } catch (Exception e) {
-            Assert.fail(e.getMessage());
-        }
+    @When("user validates that the movie with id {int} does not have {string} as a Producer")
+    public void userValidatesThatTheMovieWithIdDoesNotHaveAsAProducer(int arg0, String arg1) throws JsonProcessingException {
+        MovieService movies = new MovieService();
+        Assert.assertTrue(movies.Validate_ProducerNames(arg1, arg0));
     }
 }

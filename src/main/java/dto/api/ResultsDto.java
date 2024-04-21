@@ -1,9 +1,11 @@
 package dto.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ResultsDto implements Serializable {
     private String title;
     private int episode_id;
@@ -16,8 +18,8 @@ public class ResultsDto implements Serializable {
     private String[] starships;
     private String[] vehicles;
     private String[] species;
-    private OffsetDateTime created;
-    private OffsetDateTime edited;
+    private String created;
+    private String edited;
     private String url;
 
     public String getTitle() { return title; }
@@ -53,11 +55,11 @@ public class ResultsDto implements Serializable {
     public String[] getSpecies() { return species; }
     public void setSpecies(String[] value) { this.species = value; }
 
-    public OffsetDateTime getCreated() { return created; }
-    public void setCreated(OffsetDateTime value) { this.created = value; }
+    public String getCreated() { return created; }
+    public void setCreated(String value) { this.created = value; }
 
-    public OffsetDateTime getEdited() { return edited; }
-    public void setEdited(OffsetDateTime value) { this.edited = value; }
+    public String getEdited() { return edited; }
+    public void setEdited(String value) { this.edited = value; }
 
     public String getURL() { return url; }
     public void setURL(String value) { this.url = value; }

@@ -1,5 +1,6 @@
 package utility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,17 +14,16 @@ public class SeleniumUtility {
     {
         String browser= props.getProperty("Browser");
         String Url= props.getProperty("Url");
-        String chromedriverPath= props.getProperty("ChromeDriverPath");
-        System.setProperty("webdriver.chrome.driver",chromedriverPath);
 
-        ChromeOptions options=new ChromeOptions();
         switch (browser)
         {
             case "Chrome":
+                WebDriverManager.chromedriver().setup();
                 driver= new ChromeDriver();
                 driver.get(Url);
                 break;
             case "Firefox":
+                WebDriverManager.chromedriver().setup();
                 driver= new FirefoxDriver();
                 break;
         }
