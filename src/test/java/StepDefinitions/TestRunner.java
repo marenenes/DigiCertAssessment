@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
                  glue = "StepDefinitions",
                  tags="@E2E",
                  plugin= {"pretty"
-                         ,"json:target/report/report.json"
                          ,"html:target/report/report.html"
 
                  })
