@@ -17,9 +17,19 @@ public class SeleniumUtility {
 
         switch (browser)
         {
+
             case "Chrome":
                 WebDriverManager.chromedriver().setup();
-                driver= new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+
+                if((props.getProperty("Headless").equals("headless"))) {
+                    options.addArguments("--headless");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--ignore-certificate-errors");
+
+
+                }
+                driver= new ChromeDriver(options);
                 driver.get(Url);
                 break;
             case "Firefox":
