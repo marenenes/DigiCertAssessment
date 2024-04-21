@@ -25,7 +25,7 @@ public class SeleniumUtility {
                 if((props.getProperty("Headless").equals("headless"))) {
                     options.addArguments("--headless");
                     options.addArguments("--no-sandbox");
-                    options.addArguments("--ignore-certificate-errors");
+                    options.addArguments("--disable-dev-shm-usage");
 
                 }
                 driver= new ChromeDriver(options);
