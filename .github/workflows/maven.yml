@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        repository: https://github.com/MindfulMichaelJames/star-wars.git
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
