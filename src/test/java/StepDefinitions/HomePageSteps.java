@@ -8,6 +8,8 @@ import pageobjects.DigiCertWebTest.HomePage;
 import pageobjects.DigiCertWebTest.MovieDetailPage;
 import utility.SeleniumUtility;
 
+import java.net.MalformedURLException;
+
 public class HomePageSteps  {
     HomePage Home;
     MovieDetailPage Movie;
@@ -18,7 +20,7 @@ public class HomePageSteps  {
     }
 
     @Given("I launch browser")
-    public void iLaunchBrowser() {
+    public void iLaunchBrowser() throws MalformedURLException {
             SeleniumUtility.LaunchBrowser();
     }
 
